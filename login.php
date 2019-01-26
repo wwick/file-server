@@ -25,7 +25,7 @@
   $filePath = $filePath . '/hello.txt';
   //$testing = fopen($filePath, 'a+') or die("Unable to open file!");
   //fclose($file);
-  header('Location:http://ec2-52-15-187-19.us-east-2.compute.amazonaws.com/~elijahpena/tempFile/files.php?user='.$user);
+  header('Location:http://ec2-52-15-187-19.us-east-2.compute.amazonaws.com/~elijahpena/spring2019-module2-group-455281-467000/files.php?user='.$user);
   //echo "worked";
 
 
