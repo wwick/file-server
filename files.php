@@ -20,12 +20,16 @@
     if (is_dir($dir)) {
         if ($dh = opendir($dir)) {
             while (($file = readdir($dh)) !== false) {
-                echo "<tr>";
+                if ("." === $file) continue;
+		if(".." === $file) continue;
+		
+		echo "<tr>";
                 echo "<th>$file</th>";
+
                 echo "<th><input type =\"button\">Download</input></th>";
                 echo "<th><input type =\"button\">Delete</input></th>";
                 // echo nl2br("filename: {$file}  . \n");
-                echo "</tr>";
+                echo "</tr>";      
             }
         closedir($dh);
         }
