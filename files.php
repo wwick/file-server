@@ -7,28 +7,38 @@
 </head>
 <body>
 
-
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        Select a file to upload:
-        <input type="file" name="fileToUpload">
-        <input type="submit" value="Upload" name="submit">
-    </form> 
+<table>
+    <tr>
+        <th>Filename</th>
+        <th>Download</th>
+        <th>Delete</th>
+    </tr>
     <?php
-
     session_start();
     $user = $_SESSION["user"];
     $dir = "/srv/uploads/users/{$user}";
-    echo "php script reached";
-    echo $dir;
     if (is_dir($dir)) {
         if ($dh = opendir($dir)) {
             while (($file = readdir($dh)) !== false) {
-                echo nl2br("filename: {$file}  . \n");
+                echo "<tr>";
+                echo "<th>$file</th>";
+                echo "<th><input type =\"button\">Download</input></th>";
+                echo "<th><input type =\"button\">Delete</input></th>";
+                // echo nl2br("filename: {$file}  . \n");
+                echo "</tr>";
             }
         closedir($dh);
         }
     }
-?>
+    ?>
+</table>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select a file to upload:
+    <input type="file" name="fileToUpload">
+    <input type="submit" value="Upload" name="submit">
+</form> 
+
 </body>
 </html>
 
