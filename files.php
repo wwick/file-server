@@ -25,6 +25,9 @@
     if (is_dir($dir)) {
         if ($dh = opendir($dir)) {
             while (($file = readdir($dh)) !== false) {
+                if ("." === $file) continue;
+                if(".." === $file) continue;
+            
                 echo "<tr>";
                 echo "<th>$file</th>";
                 echo "<th><input type =\"button\" value=\"Download\"/></th>";
