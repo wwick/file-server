@@ -5,19 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>File Server</title>
     <style type=text/css>
-    table {
-        font: 12px/16px Verdana, sans-seriff;
-    }
+ table {  
+    font-family: Helvetica, Arial, sans-serif; /* Nicer font */
+    font-weight: lighter;
+    width: 640px; 
+    border-collapse: collapse;
+    border-spacing: 0; 
+}
+
+td, th {
+    border: 1px solid #CCC;
+    height: 30px;
+    text-align: center;
+ }
+
+thead {  
+    background: Blue;
+    font-weight: bold;
+    color: White;
+}
+
+tbody {
+    background: LightGray;
+}
     </style>
 </head>
 <body>
 
 <table>
+    <thead>
     <tr>
         <th>Filename</th>
         <th>Download</th>
         <th>Delete</th>
     </tr>
+    </thead>
+    <tbody>
     <?php
     session_start();
     $user = $_SESSION["user"];
@@ -38,6 +61,7 @@
         }
     }
     ?>
+    </tbody>
 </table>
 <br>
 <!-- form to upload file  -->
