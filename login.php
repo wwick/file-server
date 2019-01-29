@@ -1,7 +1,7 @@
 <?php
 
-//$URL = "http://ec2-52-15-187-19.us-east-2.compute.amazonaws.com/~elijahpena/spring2019-module2-group-455281-467000/upload.html";
-$URL = "http://ec2-52-14-191-6.us-east-2.compute.amazonaws.com/~wwick/git/spring2019-module2-group-455281-467000/upload.html";
+//$URL = "http://ec2-52-15-187-19.us-east-2.compute.amazonaws.com/~elijahpena/spring2019-module2-group-455281-467000/files.php";
+$URL = "http://ec2-52-14-191-6.us-east-2.compute.amazonaws.com/~wwick/git/spring2019-module2-group-455281-467000/files.php";
 
 session_start();
 if(isset($_POST['Submit'])) {
