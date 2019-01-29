@@ -17,7 +17,9 @@
 
     session_start();
     $user = $_SESSION["user"];
-    $dir = "/srv/users/{$user}";
+    $dir = "/srv/uploads/users/{$user}";
+    echo "php script reached";
+    echo $dir;
     if (is_dir($dir)) {
         if ($dh = opendir($dir)) {
             while (($file = readdir($dh)) !== false) {
