@@ -58,9 +58,11 @@ tbody {
                 echo "<tr>";
                 echo "<th>$file</th>";
                 echo "<th><input type =\"button\" value=\"Download\"/></th>";
+                echo "<th>";
                 echo "<form action=\"delete.php\" method=\"POST\">";
-                    echo "<th><input type =\"button\" value=\"Delete\"/></th>";
+                echo "<input type =\"button\" value=\"Delete\"/> name=\"submit\"</input>";
                 echo "</form>";
+                echo "</th>";
                 echo "</tr>";
             }
         closedir($dh);
