@@ -75,7 +75,7 @@ tbody {
 </form>
 <br>
 
-<form action="login.html" method="POST">
+<form action="abort.php" method="POST">
     <?php
         echo "You are now logged in as user ".$user;
     ?>
