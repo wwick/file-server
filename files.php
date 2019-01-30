@@ -43,6 +43,9 @@ tbody {
     <tbody>
     <?php
     session_start();
+    if !(isset($_SESSION["user"])) {
+        die("username not supplied");
+    }
     $user = $_SESSION["user"];
     $dir = "/srv/uploads/users/{$user}";
     if (is_dir($dir)) {
