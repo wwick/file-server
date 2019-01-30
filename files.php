@@ -54,10 +54,13 @@ tbody {
                 if ("." === $file) continue;
                 if(".." === $file) continue;
             
+                $_SESSION["file"] = $file;
                 echo "<tr>";
                 echo "<th>$file</th>";
                 echo "<th><input type =\"button\" value=\"Download\"/></th>";
-                echo "<th><input type =\"button\" value=\"Delete\"/></th>";
+                echo "<form action=\"delete.php\" method=\"POST\">";
+                    echo "<th><input type =\"button\" value=\"Delete\"/></th>";
+                echo "</form>";
                 echo "</tr>";
             }
         closedir($dh);
