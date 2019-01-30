@@ -82,6 +82,9 @@ tbody {
     <br>
     <p>Click "Logout" to return to the login page. </p>
     <input type="submit" value="Logout" name="submit">
+    <?php
+        session_abort();
+    ?>
 </form>
 
 </body>
