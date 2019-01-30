@@ -60,7 +60,7 @@ tbody {
                 echo "<th><input type =\"button\" value=\"Download\"/></th>";
                 echo "<th>";
                 echo "<form action=\"delete.php\" method=\"POST\">";
-                echo "<input type =\"button\" value=\"Delete\"/> name=\"submit\"</input>";
+                echo "<input type =\"button\" value=\"Delete\" name=\"submit\">";
                 echo "</form>";
                 echo "</th>";
                 echo "</tr>";
