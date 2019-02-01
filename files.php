@@ -54,10 +54,9 @@ tbody {
                 if ("." === $file) continue;
                 if(".." === $file) continue;
             
-                $file_path = $dir."/".$file;
                 echo "<tr>";
                 echo "<td>$file</td>";
-                echo "<td><a href=\"$file_path\" download=\"$file\"><button>Download</button></a></td>";                
+                echo "<td><a href=\"download.php?file=$file\"><button>Download</button></a></td>";                
                 echo "<td><a href=\"delete.php?file=$file\"><button>Delete</button></a></td>";
                 echo "</tr>";
             }
