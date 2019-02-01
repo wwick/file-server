@@ -54,16 +54,11 @@ tbody {
                 if ("." === $file) continue;
                 if(".." === $file) continue;
             
-                $_SESSION["file"] = $file;
+                $file_path = $dir."/".$file;
                 echo "<tr>";
                 echo "<td>$file</td>";
-                echo "<td><input type =\"button\" value=\"Download\"/></td>";
-                echo "<td>";
-                // echo "<form action=\"info.php\" id=\"delete\" method=\"POST\">";
-                // echo "<input type =\"button\" value=\"Delete\" name=\"submit\">";
-                echo "<a href=\"delete.php?file=$file\"><button>Delete</button></a>";
-                // echo "</form>";
-                echo "</td>";
+                echo "<td><a href=\"$file_path\" download=\"$file\"><button>Download</button></a></td>";                
+                echo "<td><a href=\"delete.php?file=$file\"><button>Delete</button></a></td>";
                 echo "</tr>";
             }
         closedir($dh);
