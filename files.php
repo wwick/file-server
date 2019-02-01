@@ -6,7 +6,7 @@
     <title>File Server</title>
     <style type=text/css>
  table {  
-    font-family: Helvetica, Arial, sans-serif; /* Nicer font */
+    font-family: Helvetica, Arial, sans-serif;
     font-weight: lighter;
     width: 640px; 
     border-collapse: collapse;
@@ -56,13 +56,13 @@ tbody {
             
                 $_SESSION["file"] = $file;
                 echo "<tr>";
-                echo "<th>$file</th>";
-                echo "<th><input type =\"button\" value=\"Download\"/></th>";
-                echo "<th>";
-                echo "<form action=\"delete.php\" method=\"POST\">";
+                echo "<td>$file</td>";
+                echo "<td><input type =\"button\" value=\"Download\"/></td>";
+                echo "<td>";
+                echo "<form action=\"info.php\" id=\"delete\" method=\"POST\">";
                 echo "<input type =\"button\" value=\"Delete\" name=\"submit\">";
                 echo "</form>";
-                echo "</th>";
+                echo "</td>";
                 echo "</tr>";
             }
         closedir($dh);
