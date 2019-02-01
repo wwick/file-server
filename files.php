@@ -59,9 +59,10 @@ tbody {
                 echo "<td>$file</td>";
                 echo "<td><input type =\"button\" value=\"Download\"/></td>";
                 echo "<td>";
-                echo "<form action=\"info.php\" id=\"delete\" method=\"POST\">";
-                echo "<input type =\"button\" value=\"Delete\" name=\"submit\">";
-                echo "</form>";
+                // echo "<form action=\"info.php\" id=\"delete\" method=\"POST\">";
+                // echo "<input type =\"button\" value=\"Delete\" name=\"submit\">";
+                echo "<a href=\"delete.php?file=$file\"><button>Delete</button></a>";
+                // echo "</form>";
                 echo "</td>";
                 echo "</tr>";
             }
