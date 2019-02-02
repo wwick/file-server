@@ -25,11 +25,11 @@ if (is_dir($dir)) {
     if ($dh = opendir($dir)) {
 
         //doesn't create table if there are no files present
-        $isEmpty = 1;
+        $isEmpty = true;
         while (($file = readdir($dh)) !== false) {
             if ("." === $file) continue;
             if(".." === $file) continue;
-            $isEmpty = 0;
+            $isEmpty = false;
             break;
         }
 
