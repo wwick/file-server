@@ -34,7 +34,7 @@
                 echo "<tr>";
                 echo "<td>$file</td>";
                 echo "<td><a href=\"download.php?file=$file\"><button>Download</button></a></td>";                
-                echo "<td><a href=\"delete.php?file=$file\"><button>Delete</button></a></td>";
+                echo "<td><div id=\"delete\"><a href=\"delete.php?file=$file\"><button>Delete</button></div></a></td>";
                 echo "</tr>";
             }
         closedir($dh);
