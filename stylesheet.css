@@ -3,7 +3,8 @@ table {
     font-weight: normal;
     width: 640px;
     border-collapse: collapse;
-    border-spacing: 0; 
+    border-spacing: 0;
+    font-size: 16px;
 }
 
 td, th {
@@ -32,7 +33,7 @@ div#delete{
   background-color: red;
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 6px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -44,22 +45,30 @@ div#delete{
     
 }
 .button1{
-  background-color: white; 
-  color: black; 
-  border: 2px solid red;
+    background-color: white; 
+    color: black; 
+    border: 2px solid red;
 }
 .button1:hover{
-background-color: red;
-  color: white;
+    background-color: red;
+    color: white;
 }
 .button2{
-  background-color: white;
-  color: black;
-  border: 2px solid green;
+    background-color: white;
+    color: black;
+    border: 2px solid green;
 }
 .button2:hover{
-background-color: green;
-color: white;
+    background-color: green;
+    color: white;
+}
+.button3{
+    background-color:white;
+    color: black;
+    border: 2px solid black;   
+}
+.button3:hover{
+    background-image:
 }
 .container{
     height: 200px;
@@ -67,7 +76,7 @@ color: white;
     border: 3px solid green;
 }
 body{
-    width: 50%; /* how wide to make your web page */
+    width: 500px; /* how wide to make your web page */
     margin: 0 auto;
     padding: 0;
     font:12px/16px Helvetica, sans-serif; /* default font */
