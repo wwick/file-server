@@ -53,15 +53,12 @@
 <br>
 
 <form action="abort.php" method="POST">
+    <p>
     <?php
-        echo "You are now logged in as user ".$user;
+        echo "You are now logged in as user \"{$user}\".";
     ?>
-    <br>
-    <p>Click "Logout" to return to the login page. </p>
+    Click "Logout" to return to the login page. </p>
     <input type="submit" value="Logout" name="submit">
-    <?php
-        session_abort();
-    ?>
 </form>
 
 </body>
