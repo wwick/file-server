@@ -7,6 +7,7 @@
     <title>File Server</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
+<div id="main"><div class="container"><div class="center">
 <body>
 
 <table>
@@ -58,7 +59,7 @@
     ?>
     Click "Logout" to return to the login page. </p>
 <a href="abort.php"><button class="button button3">Logout</button></a>
-</body>
+</body></div></div></div>
 </html>
 
 
