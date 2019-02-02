@@ -6,7 +6,7 @@
 session_start();
 if(isset($_POST['Submit'])) {
     //opens users.txt, which contains the list of usernames
-    $file = fopen("/srv/uploads/users.txt", 'a') or die("Unable to open file!");
+    $file = fopen("/srv/uploads/users.txt", 'a+') or die("Unable to open file!");
     $user = $_POST['user'];
     $lines = file("/srv/uploads/users.txt");
     fclose($file);
@@ -20,7 +20,9 @@ if(isset($_POST['Submit'])) {
     }
     //posts error message and exits if user is not in the list of usernames
     if(!$exists) {
-	die("User does not exist");
+	fwrite($file, $user."\n");
+        $path = "/srv/uploads/users/{$user}";
+        mkdir($path);
     }
     //sends users to their list of files
     $_SESSION["user"] = $user;
