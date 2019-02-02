@@ -11,16 +11,20 @@
 <body>
 
 <?php
+//ensures that a username is provided as a session variable
 session_start();
 if (!isset($_SESSION["user"])) {
     header("Location:login.html");
 }
+//determines path to the user's files
 $user = $_SESSION["user"];
 $dir = "/srv/uploads/users/{$user}";
 
+//ensures that directory is valid
 if (is_dir($dir)) {
     if ($dh = opendir($dir)) {
 
+        //doesn't create table if there are no files present
         $isEmpty = 1;
         while (($file = readdir($dh)) !== false) {
             if ("." === $file) continue;
@@ -28,6 +32,8 @@ if (is_dir($dir)) {
             $isEmpty = 0;
             break;
         }
+
+        //creates table header
         if (!$isEmpty) {
             echo "
             <table>
@@ -42,6 +48,7 @@ if (is_dir($dir)) {
             ";
             closedir($dh);
             $dh = opendir($dir);
+            //creates rows of tables, each of which features the file name, a download button, and a delete button
             while (($file = readdir($dh)) !== false) {
                 if ("." === $file) continue;
                 if(".." === $file) continue;
@@ -54,6 +61,7 @@ if (is_dir($dir)) {
             }
             closedir($dh);
             echo "</tbody></table>";
+            //prints error message
         } else {
             echo "<p> Your directory is empty. Try uploading some files ;) </p>";
         }
@@ -63,12 +71,13 @@ if (is_dir($dir)) {
 
 
 <br>
-<!-- form to upload file  -->
+<!-- form to upload new files  -->
 <form action="upload.php" method="POST" enctype="multipart/form-data">
     Select a file to upload (max = 100 MB):
     <input type="file" name="fileToUpload">
     <input type="submit" value="Upload" name="submit">
 </form>
+<!-- logout form -->
 <br>
 
     <p>
