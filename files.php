@@ -7,8 +7,9 @@
     <title>File Server</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
-<div id="main"><div class="container"><div class="center">
+
 <body>
+<div id="main"><div class="container"><div class="center">
 
 <?php
 //ensures that a username is provided as a session variable
@@ -55,8 +56,8 @@ if (is_dir($dir)) {
             
                 echo "<tr>";
                 echo "<td>$file</td>";
-                echo "<td><a href=\"download.php?file=$file\"><button class =\"button button2\">Download</button></a></td>";                
-                echo "<td><a href=\"delete.php?file=$file\"><button class=\"button button1\">Delete</button></a></td>";
+                echo "<td><a href=\"download.php?file=$file\" class =\"button button2\">Download</a></td>";                
+                echo "<td><a href=\"delete.php?file=$file\" class=\"button button1\">Delete</a></td>";
                 echo "</tr>";
             }
             closedir($dh);
@@ -85,8 +86,9 @@ if (is_dir($dir)) {
         echo "You are now logged in as user \"{$user}\".";
     ?>
     Click "Logout" to return to the login page. </p>
-<a href="abort.php"><button class="button button3">Logout</button></a>
-</body></div></div></div>
+<a href="abort.php" class="button button3">Logout</a>
+</div></div></div>
+</body>
 </html>
 
 
