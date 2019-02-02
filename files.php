@@ -47,7 +47,7 @@
 <br>
 <!-- form to upload file  -->
 <form action="upload.php" method="POST" enctype="multipart/form-data">
-    Select a file to upload:
+    Select a file to upload (max = 100 MB):
     <input type="file" name="fileToUpload">
     <input type="submit" value="Upload" name="submit">
 </form>
