@@ -40,6 +40,8 @@ if (is_dir($dir)) {
             </thead>
             <tbody>
             ";
+            closedir($dh);
+            $dh = opendir($dir);
             while (($file = readdir($dh)) !== false) {
                 if ("." === $file) continue;
                 if(".." === $file) continue;
