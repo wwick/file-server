@@ -10,24 +10,36 @@
 <div id="main"><div class="container"><div class="center">
 <body>
 
-<table>
-    <thead>
-    <tr>
-        <th>Filename</th>
-        <th>Download</th>
-        <th>Delete</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php
-    session_start();
-    if (!isset($_SESSION["user"])) {
-        header("Location:login.html");
-    }
-    $user = $_SESSION["user"];
-    $dir = "/srv/uploads/users/{$user}";
-    if (is_dir($dir)) {
-        if ($dh = opendir($dir)) {
+<?php
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location:login.html");
+}
+$user = $_SESSION["user"];
+$dir = "/srv/uploads/users/{$user}";
+
+if (is_dir($dir)) {
+    if ($dh = opendir($dir)) {
+
+        $isEmpty = 1;
+        while (($file = readdir($dh)) !== false) {
+            if ("." === $file) continue;
+            if(".." === $file) continue;
+            $isEmpty = 0;
+            break;
+        }
+        if (!$isEmpty) {
+            echo "
+            <table>
+            <thead>
+            <tr>
+                <th>Filename</th>
+                <th>Download</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            ";
             while (($file = readdir($dh)) !== false) {
                 if ("." === $file) continue;
                 if(".." === $file) continue;
@@ -38,12 +50,16 @@
                 echo "<td><a href=\"delete.php?file=$file\"><button class=\"button button1\">Delete</button></a></td>";
                 echo "</tr>";
             }
-        closedir($dh);
+            closedir($dh);
+            echo "</tbody></table>";
+        } else {
+            echo "<p> Your directory is empty. Try uploading some files ;) </p>";
         }
     }
-    ?>
-    </tbody>
-</table>
+}
+?>
+
+
 <br>
 <!-- form to upload file  -->
 <form action="upload.php" method="POST" enctype="multipart/form-data">
