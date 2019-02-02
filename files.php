@@ -10,7 +10,16 @@
 <div id="main"><div class="container"><div class="center">
 <body>
 
-<table>
+<?php
+    session_start();
+    $user = $_SESSION["user"];
+    $dir = "/srv/uploads/users/{$user}";
+    if(($file = readdir($dh)) == false){
+        echo "<p> There are no files to display, try uploading some :) </p>";
+    }
+    else{
+        echo "
+        <table>
     <thead>
     <tr>
         <th>Filename</th>
@@ -19,6 +28,11 @@
     </tr>
     </thead>
     <tbody>
+    ";
+    }
+?>
+
+
     <?php
     session_start();
     if (!isset($_SESSION["user"])) {
