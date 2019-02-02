@@ -8,7 +8,7 @@ table {
 }
 
 td, th {
-    border: 1px solid #CCC;
+    border: 1px solid black;
     height: 30px;
     text-align: center;
  }
@@ -19,8 +19,8 @@ thead {
     color: White;
 }
 
-tr:nth-child(even) {background: #CCC}
-tr:nth-child(odd) {background: #FFF}
+tbody > tr:nth-child(odd) {background: #CCC}
+tbody > tr:nth-child(even) {background: #FFF}
 
 div#main{
     text-align: center;
