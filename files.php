@@ -52,15 +52,12 @@
 </form>
 <br>
 
-<form action="abort.php" method="POST">
     <p>
     <?php
         echo "You are now logged in as user \"{$user}\".";
     ?>
     Click "Logout" to return to the login page. </p>
-    <input type="submit" value="Logout" name="submit">
-</form>
-
+<a href="abort.php"><button class="button button3">Logout</button></a>
 </body>
 </html>
 

@@ -33,7 +33,7 @@ div#delete{
   background-color: red;
   border: none;
   color: white;
-  padding: 6px 12px;
+  padding: 4px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -68,7 +68,8 @@ div#delete{
     border: 2px solid black;   
 }
 .button3:hover{
-    background-image:
+    background-color: white;
+    color: white;
 }
 .container{
     height: 200px;
