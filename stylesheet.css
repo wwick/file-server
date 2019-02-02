@@ -19,9 +19,9 @@ thead {
     color: White;
 }
 
-tbody {
-    background: LightGray;
-}
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+
 div#main{
     text-align: center;
     margin: 0 auto;
