@@ -14,12 +14,12 @@ td, th {
  }
 
 thead {  
-    background: Blue;
+    background: rgb(5, 137, 255);
     font-weight: bold;
     color: White;
 }
 
-tbody > tr:nth-child(odd) {background: #CCC}
+tbody > tr:nth-child(odd) {background: rgb(245, 248, 207);}
 tbody > tr:nth-child(even) {background: #FFF}
 tbody {color: black}
 
