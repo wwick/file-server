@@ -17,7 +17,7 @@ if(isset($_POST['Submit']) and $user != "") {
         }
     }
     //adds user if user did not previously exist
-    if(!$exists) {
+    if(!$exists and preg_match('/^[\w_\-]+$/', $username)) {
 	fwrite($file, $user."\n");
         $path = "/srv/uploads/users/{$user}";
         mkdir($path);
