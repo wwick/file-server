@@ -1,8 +1,5 @@
 <?php
 
-//$URL = "http://ec2-52-15-187-19.us-east-2.compute.amazonaws.com/~elijahpena/spring2019-module2-group-455281-467000/files.php";
-//$URL = "http://ec2-52-14-191-6.us-east-2.compute.amazonaws.com/~wwick/git/spring2019-module2-group-455281-467000/files.php";
-
 session_start();
 if(isset($_POST['Submit'])) {
     //opens users.txt, which contains the list of usernames
@@ -18,7 +15,7 @@ if(isset($_POST['Submit'])) {
             break;
         }
     }
-    //posts error message and exits if user is not in the list of usernames
+    //adds user if user did not previously exist
     if(!$exists) {
 	fwrite($file, $user."\n");
         $path = "/srv/uploads/users/{$user}";

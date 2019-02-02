@@ -7,8 +7,8 @@
     <style type=text/css>
  table {  
     font-family: Helvetica, Arial, sans-serif;
-    font-weight: lighter;
-    width: 640px; 
+    font-weight: normal;
+    width: 640px;
     border-collapse: collapse;
     border-spacing: 0; 
 }

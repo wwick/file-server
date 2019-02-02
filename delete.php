@@ -1,11 +1,14 @@
 <?php
-    session_start();
-    if(!isset(_SESSION["user"])){
-        header("Location:http://ec2-52-14-191-6.us-east-2.compute.amazonaws.com/~wwick/git/spring2019-module2-group-455281-467000/login.html");
-    }
-    $user = $_SESSION["user"];
-    $dir = "/srv/uploads/users/".$user;
-    $fileName = basename($_REQUEST["file"]);
-    unlink($dir."/".$fileName);
-    header("Location:http://ec2-52-14-191-6.us-east-2.compute.amazonaws.com/~wwick/git/spring2019-module2-group-455281-467000/files.php");
+//ensures that a username is supplied as a session variable
+session_start();
+if(!isset(_SESSION["user"])){
+    header("Location:login.html");
+}
+$user = $_SESSION["user"];
+//gets path to file
+$dir = "/srv/uploads/users/".$user;
+$fileName = basename($_REQUEST["file"]);
+//deletes file
+unlink($dir."/".$fileName);
+header("Location:files.php");
 ?>
