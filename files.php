@@ -1,34 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>File Server</title>
-    <style type=text/css>
- table {  
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    width: 640px;
-    border-collapse: collapse;
-    border-spacing: 0; 
-}
-
-td, th {
-    border: 1px solid #CCC;
-    height: 30px;
-    text-align: center;
- }
-
-thead {  
-    background: Blue;
-    font-weight: bold;
-    color: White;
-}
-
-tbody {
-    background: LightGray;
-}
-    </style>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
 

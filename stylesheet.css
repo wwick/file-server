@@ -1,0 +1,23 @@
+table {  
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    width: 640px;
+    border-collapse: collapse;
+    border-spacing: 0; 
+}
+
+td, th {
+    border: 1px solid #CCC;
+    height: 30px;
+    text-align: center;
+ }
+
+thead {  
+    background: Blue;
+    font-weight: bold;
+    color: White;
+}
+
+tbody {
+    background: LightGray;
+}
