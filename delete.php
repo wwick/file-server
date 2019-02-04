@@ -7,8 +7,11 @@ if(!isset($_SESSION["user"])){
 $user = $_SESSION["user"];
 //gets path to file
 $dir = "/srv/uploads/users/".$user;
-$fileName = basename($_REQUEST["file"]);
+$file_name = basename($_REQUEST["file"]);
+$file = $dir."/".$file_name;
 //deletes file
-unlink($dir."/".$fileName);
+if (file_exists($file)) {
+    unlink($file);
+}
 header("Location:files.php");
 ?>

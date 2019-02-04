@@ -20,7 +20,9 @@ header('Content-Length: ' . filesize($file));
 ob_clean();
 flush();
 //downloads the file
-readfile($file);
+if (file_exists($file)) {
+    readfile($file);
+}
 header("Location:files.php");
 
 ?>
