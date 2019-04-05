@@ -1,11 +1,11 @@
 
-# File Server (Module 2)
+# File Server
+
 # Links
-Elijah Pena's AWS - http://ec2-52-15-187-19.us-east-2.compute.amazonaws.com/~elijahpena/spring2019-module2-group-455281-467000/login.html
 
-Will Wick's AWS - http://ec2-52-14-191-6.us-east-2.compute.amazonaws.com/~wwick/git/spring2019-module2-group-455281-467000/login.html
+http://ec2-52-14-191-6.us-east-2.compute.amazonaws.com/~wwick/git/spring2019-module2-group-455281-467000/login.html
 
-Our file server allows you to upload, delete, and download files to your heart's content!
+This file server allows you to upload, delete, and download files to your heart's content!
 
   - Upload funny cat videos
   - Download funny cat videos
@@ -16,7 +16,6 @@ Our file server allows you to upload, delete, and download files to your heart's
   - Aren't on the list of approved users? Create your own!
   - Hover over buttons for *cool* effects!
   - Files are displayed in a table
-
 
 Files supported:
   - PDF
@@ -36,11 +35,6 @@ PHP, HTML, and CSS were used. Also, Amazon hosted the servers.
 3. When needed, download your file from the **cloud**
 4. Delete files from the **cloud**
 5. Logout at the bottom of the page when done (so sad to see you go)
-
-### Development
-
-Want to contribute? Great! This project is now abandoned by its owners. We just want the grade.
-
 
 
 
