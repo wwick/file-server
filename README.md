@@ -7,16 +7,6 @@ http://ec2-52-14-191-6.us-east-2.compute.amazonaws.com/~wwick/git/spring2019-mod
 
 This file server allows you to upload, delete, and download files to your heart's content!
 
-  - Upload funny cat videos
-  - Download funny cat videos
-  - Delete them...?
-
-# Special Features!
-
-  - Aren't on the list of approved users? Create your own!
-  - Hover over buttons for *cool* effects!
-  - Files are displayed in a table
-
 Files supported:
   - PDF
   - TXT
@@ -25,16 +15,12 @@ Files supported:
 
 ### Tech
 
-PHP, HTML, and CSS were used. Also, Amazon hosted the servers.
+PHP, HTML, and CSS were used. Server hosted on AWS
 
 ### How to use
 
-
 1. Logon with one of the approved users (wwick, elijahpena, rcytron, tsproull) or create your own
-2. Upload a file to the **cloud**
-3. When needed, download your file from the **cloud**
-4. Delete files from the **cloud**
-5. Logout at the bottom of the page when done (so sad to see you go)
-
-
-
+2. Upload a file
+3. When needed, download your file
+4. Delete files
+5. Logout at the bottom of the page
