@@ -1,8 +1,6 @@
 
 # File Server
 
-# Links
-
 http://ec2-52-14-191-6.us-east-2.compute.amazonaws.com/~wwick/git/file-server/login.html
 
 This file server allows you to upload, delete, and download files to your heart's content!
